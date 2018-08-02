@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="GitLab Pages">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> My Firefox Setup</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+		</div>
+		<hr>
+		<blockquote> With diligence it is possible to make anything run slowly. </blockquote>
+		<cite>- Tom Duff </cite>
+		<hr>
+		<h1> My Firefox Setup </h1>
+		<p>
+		One reason often stated when someone is asked why they use Firefox over other fine alternatives like Chromium (and its sidekicks Opera, Brave et al), w3m, <strike>Internet Explorer</strike> is that Firefox has a very rich addon ecosystem and is (still) very <em>customizable</em> (some of the posts on <a href="https://reddit.com/r/unixporn">/r/unixporn</a> will blow your mind). With that thought, I thought I would share how I use Firefox to browse the web everyday.
+		</p>
+		<h2> Look and Feel </h2>
+		<p> First off, this is what my Firefox setup looks like:<br>
+		<img src="img/ff.png"></img>
+		Right off, you can notice a few obvious things. The most obvious one is that the tab list is not on the top, but rather to the left. Removing the default tab bar was pretty simple with a declaration in userChrome.css (<a href="https://i.redd.it/v7lkiqannojz.png">useful guide</a> on how to do so by /u/DylanBoss, and the <a href="https://www.reddit.com/r/firefox/comments/736cji/how_to_hide_native_tabs_in_firefox_57_tree_style/">specific rules</a> you have to add). The addon used for the vertical tree like tab structure is called <a href="https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/">Tree Style Tab</a>, which I'll talk about later. The second thing is that there is no searchbar, but that was pretty useless in the first place as you can just search from the normal url bar.
+		</p>
+		<p> Another thing different from the default firefox config is the dark theme. This can be set from the Firefox <em>Customize...</em> option in the menu, along with setting a dark gtk theme (mine is arc-dark).</p>
+		<h2> Addons </h2>
+		<p> No discussion about Firefox would be complete without mentioning addons. These are the addons which I view as 'must-have'.
+		<ul>
+		<li> <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>:<br>
+		If you only get to install one addon in your life, this should be it. Hands down the best ad-blocker for any browser. Just install it and you're done, you never have to touch it again.
+		<li> <a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">HTTPS Everywhere</a>:<br>
+		Does what it says on the tin. Enforces HTTPS wherever possible, so that you don't have to use insecure HTTP ever again, even if you click on a HTTP link!
+		<li> <a href="https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/">Cookie Autodelete</a>:<br>
+		Everytime you exit a tab, Cookie Autodelete automatically deletes all cookies associated with that website so that they can't be used to track you.
+		<li> <a href="https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/">Tree Style Tab</a>:<br>
+		Tree style tabs have provided the greatest increase in usability out of any of the addons I have installed. Having 20+ tabs open on the default tab bar is anxiety inducing. Tree style tabs have 2 advantages over regular tabs: vertical arrangement (useful on widescreen displays), and a tree heirarchy for tabs (i.e., if you click on a link on a website, the new tab opened will be considered a "child" of the current tab and will show up below it slightly indented) This provides a ton of neat features, like collapsing certain branches, closing all related tabs at once and more. This allows you to effortlessly manage your tabs and the vertical arrangement makes sure that the titles are always readable.
+		</ul>
+		</p>
+		<p> Honourable mentions go to <a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/">NoScript</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger</a>, and <a href="https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/">Tridactlyl</a>.
+		</p>
+
+		<h2> Miscellanous Preferences </h2>
+		<p>
+		<ul>
+		<li> Default Search Engine: Duckduckgo. The bangs search feature is incredible, however I find the regular search result accuracy to be lacking compared to google, especially for a few niche/obscure areas.
+		<li> I've also got history and any sort of telemetry permanently disabled, and so Firefox is always considered to be in 'Private Browsing' mode.
+		</ul>
+		</p>
+		
+		<h2> Conclusion </h2>
+		<p> Firefox, especially since the quantum update, has been a very pleasant browser to use. Even with addons moving to WebExtensions, I haven't missed many things from the XUL days, and all the addons I regularly use have made the switch. Even if Firefox didn't have all the features I talked about, I would probably still use it. Firefox is one of the last remaining bastions of the Open Web, and it would be a shame to see it fade into obscurity. </p>
+		<hr>
+		<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://chin123.gitlab.io" property="cc:attributionName" rel="cc:attributionURL">Chinmaya Krishnan Mahesh</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <a href="https://gitlab.com/chin123/chin123.gitlab.io">Source on GitLab</a>.
+		</footer>
+	</body>
+</html>

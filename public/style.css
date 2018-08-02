@@ -7,7 +7,17 @@ body {
 	margin-left: auto;
 }
 
-.navbar a {
+a {
 	color: #444;
+}
+
+.navbar a {
 	padding: 0.2em;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
