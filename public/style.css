@@ -7,12 +7,9 @@ body {
 	margin-left: auto;
 }
 
-a {
-	color: #444;
-}
-
 .navbar a {
 	padding: 0.2em;
+	color: #444;
 }
 
 img {
