@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="generator" content="GitLab Pages">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Android as FOSS as possible</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+		</div>
+		<hr>
+		<blockquote>WIPE DALVIK CACHE AND CACHE 14 TIMES WHILE DANCING IN A CIRCLE AROUND A FIRE SINGING DAVID HASSELHOFF'S LATEST SINGLE BEFORE FLASHING NEW VERSION!!! </blockquote>
+		<cite>- XDA user </cite>
+		<hr>
+		<h1> Android as FOSS as possible </h1>
+		<em>11 August 2018</em>
+		<p>
+		<em>Wait... isn't Android already FOSS?</em><br>
+		Erm... kind of. The base android operating system, AOSP (Android Open Source Project) is free software, but <a href="https://arstechnica.com/gadgets/2018/07/googles-iron-grip-on-android-controlling-open-source-by-any-means-necessary/">almost every single part</a> you use and interact with everyday is completely proprietary, and Google further tightens their grasp on android by introducing concepts like <a href="https://github.com/Telegram-FOSS-Team/Telegram-FOSS/blob/master/Notifications.md">requiring messaging apps to use their proprietary push messaging services</a> in order to function the way they should. A lot of FOSS apps which used to be included by default on android (for example, the launcher, the calendar and the email client) have been abandoned and replaced by Google's own proprietary solutions (think Google Now Launcher, Google Calender, GMail etc). Imagine running Linux but having every single program you interact with be proprietary; it kind of defeats the purpose of having a FOSS operating system. Here I'm going to talk about how to make your android device as FOSS as possible while still maintaining your device's practicality. There are several ways to do this: attain root access and delete all the proprietary applications, install a custom ROM without google play services, disable all proprietary applications and so on. Here I am going to go the custom ROM route as this is the method I prefer and root access is generally not a good thing to have all the time.
+		</p>
+
+		<h2> Unlocking the Bootloader </h2>
+		<p>
+		Before we can begin to FOSSify our android device, we need to unlock the bootloader. The bootloader is a program which loads the rest of the Android OS for you. On an android device, it does a few more things like verifying whether the OS being booted is genuine (i.e, what was originally put by the manufacturer) or not. As the custom ROM is not what is trusted by the locked bootloader, we'll need to unlock it. On most devices, this should be possible, and a quick <strike>google</strike> duckduckgo search (for example "unlock bootloader moto g5 plus") would tell you how to do so. However, if your device doesn't have an unlocked bootloader, you're kind of stuck here. You could attain root access by exploiting a few flaws in the OS, but this varies from device to device and isn't very straightforward. <br>
+		<strong>Achtung! Unlocking the bootloader will most probably void your warranty.</strong>
+		</p>
+
+		<h2> Installing a custom recovery </h2>
+		<p>
+		A recovery is like a tiny OS which helps you do things like flashing/updating a ROM, making backups, and flashing/updating the recovery itself. You can boot your phone into the recovery using a specific key combination while booting (usually something like power button + volume down). While you can probably flash a ROM without a custom recovery, it is highly recommended that you use one as it makes your life much easier. Unfortunately, there is only one actively developed recovery nowadays, <a href="https://twrp.me/">TWRP</a>. On the bright side, it's open source! If your phone has an unlockable bootloader, it most probably has a TWRP port too, either an official or an unofficial one. Again, the internet is your friend, and you'll probably find an official port or an unofficial one in the <a href="https://forum.xda-developers.com/">XDA forums</a>. <br>
+		<strong>Achtung! If your port is unofficial, make sure that the porters are good with releasing the source code and that the recovery is in a good, working state by browsing the XDA thread for that port.</strong><br>
+		<strong>Sometimes, booting into stock android after flashing the recovery rewrites the recovery, resulting in you having to flash it again. To save yourself from this hassle, it might be better to boot directly into the recovery after installing it, and then flashing the custom ROM right away.</strong>
+		</p>
+
+		<h2> Installing a custom ROM </h3>
+		<p>
+		We're almost there! Now that you have a custom recovery installed, it's now time to install a custom ROM. The two "big" custom ROMs, in my opinion, are <a href="https://lineageos.org/">LineageOS</a> and <a href="https://www.omnirom.org/">OmniROM</a>, with LineageOS supporting more devices and being more popular among the custom ROM community. Again, there'll probably be an official port or an unofficial one on XDA. Most of the time, you'll have to wipe your phone's memory, download a .zip file, copy it onto your phone, and flash it through the recovery. The steps may vary from device to device (<a href="https://wiki.lineageos.org/devices/bacon/install">here</a>'s the steps for how to install it on the OnePlus One, for example), but they will usually follow this pattern. Refer to the install instructions from the device page on the LineageOS or OmniROM website (or an XDA thread for unoffically supported devices, or sometimes even an official XDA thread), depending on which one you choose. If in doubt, choose LineageOS as it's more popular and there will be more people to help you if you're stuck.
+		</p>
+
+		<h2> FOSS alternatives for common proprietary apps </h2>
+		<p>
+		With some perseverance and luck, after following all the steps detailed above, you should have a working device with a custom ROM installed! Now, time to get into the important part: the FOSS apps which I said are your saving grace from Google. First off, you won't have access to the play store, or any other Google goodies like Google Assistant, Maps, Voice recognition etc. Also, you would have noticed that a lot of the old, open source AOSP apps like the calendar, email, and gallery have appeared, slightly updated by the ROM maintainers to keep up with modern android. In the FOSS android world, you will be downloading most of your apps from <a href="https://f-droid.org/">F-Droid</a>, the free software alternative to the play store. So open the default browser on your device, go to the F-Droid website and install the app and you're set. Here are a few open source alternatives to popular proprietary apps on android, all available on F-Droid:<br>
+		<h3> Alternatives to: </h3>
+		<ul>
+		<li> Chrome: <a href="https://f-droid.org/en/packages/org.mozilla.fennec_fdroid">Fennec F-Droid</a> (Firefox, but without the proprietary parts)
+		<li> YouTube: <a href="https://f-droid.org/en/packages/org.schabi.newpipe">NewPipe</a> (A FOSS lightweight frontend for YouTube and SoundCloud)
+		<li> Play Music: <a href="https://f-droid.org/en/packages/com.poupa.vinylmusicplayer">Vinyl Music Player</a>
+		<li> Google Maps: <a href="https://f-droid.org/en/packages/net.osmand.plus/">OsmAnd~</a> (A very poweful OpenStreetMap client)
+		<li> GMail/Any other email client: <a href="https://f-droid.org/en/packages/com.fsck.k9"> K-9 Mail </a> (has some neat features like PGP encryption support too!)
+		<li> WhatsApp/Facebook Messenger/Hangouts/Bla bla bla: <a href="https://f-droid.org/en/packages/im.vector.alpha">Riot</a> and maybe <a href="https://f-droid.org/en/packages/org.telegram.messenger">Telegram</a> if you can't convince anyone to use Riot (honestly, email with PGP is better than telegram, although I can't deny that telegram is very convinient to use).
+		<li> Twitter: <a href="https://f-droid.org/en/packages/com.keylesspalace.tusky/">Mastodon</a> (I've linked Tusky, a client for Mastodon, a federated social network)
+		</ul>
+
+		<h3> Not alternatives, but some cool FOSS apps: </h3>
+		<ul>
+		<li> <a href="https://f-droid.org/en/packages/com.amaze.filemanager">Amaze File Manager</a>
+		<li> <a href="https://f-droid.org/en/packages/org.shadowice.flocke.andotp">andOTP 2 Factor Authentication</a>
+		<li> <a href="https://f-droid.org/en/packages/org.sufficientlysecure.viewer">Document Viewer</a>
+		<li> <a href="https://f-droid.org/en/packages/de.tap.easy_xkcd">Easy XKCD, for your XKCD viewing pleasure</a>
+		<li> <a href="https://f-droid.org/en/packages/net.sourceforge.opencamera">Open Camera, a better camera app</a>
+		<li> <a href="https://f-droid.org/en/packages/org.sufficientlysecure.keychain">OpenKeychain: PGP keystore</a>
+		<li> <a href="https://guardianproject.info/apps/orbot/">Orbot, Tor for android</a>
+		<li> <a href="https://guardianproject.info/apps/orfox/">Orfox, Tor Browser for android</a>
+		<li> <a href="https://f-droid.org/en/packages/org.supertuxkart.stk">SuperTuxKart, easily the best video game of all time™️</a>
+		<li> <a href="https://f-droid.org/en/packages/com.termux">Termux, a super cool terminal emulator with a ton of packages available</a>
+		<li> <a href="https://f-droid.org/en/packages/com.github.yeriomin.yalpstore">Yalp Store: Download apks from the Google Play Store, the trapdoor incase you absolutely need something</a>
+		</ul>
+		</p>
+
+		<h2> Conclusion </h2>
+		<p>
+		Great! You now have a mostly FOSS android phone, with some obvious exceptions. The drivers for 3d acceleration, WiFi, the Modem, and basically every other driver is probably still a binary blob. There is not much you can do about this, unless you have a phone which has support for <a href="https://www.replicant.us/">Replicant</a>, a fully free android distribution. Even in that case, you'll still need binary blobs for some (subjectively) important features like WiFi. This is probably the most you can go while still having a functional "smart" andriod phone. Sadly, the state of AOSP for FOSS Purists is not very good and it certainly doesn't look like Google is going to help improve this situation in any way. XDA Forums, the hub of custom ROM development, is a complete mess and incredibly annoying to go through. This is why I am eagerly awaiting the <a href="https://puri.sm/shop/librem-5/">Purism Librem 5</a>, a Linux-running smartphone which will hopefully not contain any proprietary blobs. But no matter what the current situation is, run FOSS and support the great people behind custom ROMs, F-Droid and all the open source apps out there!
+		</p>
+		<hr>
+		<footer>
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://chin123.gitlab.io" property="cc:attributionName" rel="cc:attributionURL">Chinmaya Krishnan Mahesh</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <a href="https://gitlab.com/chin123/chin123.gitlab.io">Source on GitLab</a>.
+		</footer>
+	</body>
+</html>
